@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error 404 page not found</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #main-content{
+        width: 100%;
+        min-height: 100vh;
+        background: #5758BB;
+        background-image: url("images/diamond-bg.svg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        #main-content h1{
+            color: #fff;
+            font-size: 3em;
+        }
+        h1 span{
+            display: inline-block;
+            transition: all 0.3s;
+            animation: anim 2s ease infinite alternate;
+            animation-delay: calc(var(--i)*0.3s);
+        }
+        @keyframes anim{
+            0%,100%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(50px);
+            }
+        }
+        a{
+            display: block;
+            font-size: 2em;
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 430px){
+            #main-content h1{
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main-content">
+        <a href="index.html">Home</a>
+        <h1><span style="--i:1;">404</span> <span style="--i:2;">Page</span> <span style="--i:3;">Not</span> <span style="--i:4;">Found</span></h1>
+    </div>
+</body>
+</html>
